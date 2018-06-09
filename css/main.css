@@ -1,10 +1,10 @@
 @font-face {
   font-family: "Big Noodle Tilting";
-  src: url("/fonts/big_noodle_titling.ttf");
+  src: url("/vendor/fonts/big_noodle_titling.ttf");
 }
 @font-face {
   font-family: "Locke";
-  src: url("/fonts/locke-regular.otf");
+  src: url("/vendor/fonts/locke-regular.otf");
 }
 
 body {
@@ -12,7 +12,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   background: linear-gradient(rgba(255,255,255,.70),rgba(255,255,255,.70)),
-      url("../img/background.bmp");
+      url("/img/background.bmp");
   background-size: cover;
   background-position-y: 15em;
   background-repeat: no-repeat;
@@ -20,8 +20,27 @@ body {
   position: relative;
 }
 
-.jumbotron h1, h2{
+h1,
+h2,
+h3,
+h4{
   font-family: "Big Noodle Tilting";
+}
+
+h2{
+  font-size: 32px;
+  line-height: 50px;
+  padding: 0px 10px 20px 10px;
+}
+
+h3{
+  font-size: 32px;
+}
+h4{
+  font-size: 24px;
+}
+
+.jumbotron h1, h2{
   color: white;
   line-height: 50px;
   text-shadow: #631F01 1px 0 10px;
@@ -33,32 +52,205 @@ body {
   padding: 20px 10px 0px 10px;
 }
 
-h2{
-  font-size: 32px;
-  line-height: 50px;
-  padding: 0px 10px 20px 10px;
+#mainNav {
+  position: absolute;
+  border-bottom: 1px solid #e9ecef;
+  background-color: white;
+  font-size: 24px;
+  font-family:"Big Noodle Tilting", 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-h3{
-  font-family: "Big Noodle Tilting";
-  font-size: 32px;
-}
-h4{
-  font-family: "Big Noodle Tilting";
+#mainNav .navbar-brand {
   font-size: 24px;
+  font-weight: 800;
+  color: #343a40;
 }
 
-.nav {
+#mainNav .navbar-toggler {
+  font-size: 12px;
+  font-weight: 800;
+  padding: 13px;
+  text-transform: uppercase;
+  color: #343a40;
+}
+
+#mainNav .navbar-nav > li.nav-item > a {
   font-size: 24px;
-  font-family:"Big Noodle Tilting";
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 768px) {
+  #mainNav {
+    border-bottom: 1px solid transparent;
+    background: transparent;
+  }
+  #mainNav .navbar-brand {
+    padding: 10px 20px;
+    color: #fff;
+  }
+  #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  #mainNav .navbar-nav > li.nav-item > a {
+    padding: 10px 20px;
+    color: #fff;
+  }
+  #mainNav .navbar-nav > li.nav-item > a:focus, #mainNav .navbar-nav > li.nav-item > a:hover {
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #mainNav {
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+  }
+  #mainNav.is-fixed {
+    /* when the user scrolls down, we hide the header right above the viewport */
+    position: fixed;
+    top: -67px;
+    -webkit-transition: -webkit-transform 0.2s;
+    -moz-transition: -moz-transform 0.2s;
+    transition: transform 0.2s;
+    border-bottom: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  #mainNav.is-fixed .navbar-brand {
+    color: #212529;
+  }
+  #mainNav.is-fixed .navbar-brand:focus, #mainNav.is-fixed .navbar-brand:hover {
+    color: #0085A1;
+  }
+  #mainNav.is-fixed .navbar-nav > li.nav-item > a {
+    color: #212529;
+  }
+  #mainNav.is-fixed .navbar-nav > li.nav-item > a:focus, #mainNav.is-fixed .navbar-nav > li.nav-item > a:hover {
+    color: #0085A1;
+  }
+  #mainNav.is-visible {
+    /* if the user changes the scrolling direction, we show the header */
+    -webkit-transform: translate3d(0, 100%, 0);
+    -moz-transform: translate3d(0, 100%, 0);
+    -ms-transform: translate3d(0, 100%, 0);
+    -o-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
 }
 
 p{
   font-family: Locke;
 }
 
-.navbar {
-  margin-bottom: 0;
+header.masthead {
+margin-bottom: 50px;
+background: no-repeat center center;
+background-color: #868e96;
+background-attachment: scroll;
+position: relative;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+header.masthead .overlay {
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+background-color: #212529;
+opacity: 0.5;
+}
+
+header.masthead .page-heading,
+header.masthead .post-heading,
+header.masthead .site-heading {
+padding: 200px 0 150px;
+color: white;
+}
+
+@media only screen and (min-width: 768px) {
+header.masthead .page-heading,
+header.masthead .post-heading,
+header.masthead .site-heading {
+  padding: 200px 0;
+}
+}
+
+header.masthead .page-heading,
+header.masthead .site-heading {
+text-align: center;
+}
+
+header.masthead .page-heading h1,
+header.masthead .site-heading h1 {
+font-size: 50px;
+margin-top: 0;
+}
+
+header.masthead .page-heading .subheading,
+header.masthead .site-heading .subheading {
+font-size: 24px;
+font-weight: 300;
+line-height: 1.1;
+display: block;
+margin: 10px 0 0;
+font-family: "Big Noodle Tilting", 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+header.masthead .page-heading h1,
+header.masthead .site-heading h1 {
+  font-size: 80px;
+}
+}
+
+header.masthead .post-heading h1 {
+font-size: 35px;
+}
+
+header.masthead .post-heading .meta,
+header.masthead .post-heading .subheading {
+line-height: 1.1;
+display: block;
+}
+
+header.masthead .post-heading .subheading {
+font-size: 24px;
+font-weight: 600;
+margin: 10px 0 30px;
+font-family: "Big Noodle Tilting", 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+header.masthead .post-heading .meta {
+font-size: 20px;
+font-weight: 300;
+font-style: italic;
+font-family: "Locke", 'Times New Roman', serif;
+}
+
+header.masthead .post-heading .meta a {
+color: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+header.masthead .post-heading h1 {
+  font-size: 55px;
+}
+header.masthead .post-heading .subheading {
+  font-size: 30px;
+}
 }
 
 .jumbotron {

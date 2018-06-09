@@ -1,26 +1,22 @@
 {
-    "title": "Clean Blog",
-    "name": "startbootstrap-clean-blog",
-    "version": "4.1.1",
-    "description": "Clean Blog is a Medium inspired blog theme for Bootstrap.",
+    "title": "Notorious RPG",
+    "name": "project-mutant-campaign",
+    "version": "1.0.0",
+    "description": "",
     "keywords": [
         "css",
         "sass",
         "html",
         "responsive",
-        "theme",
-        "template"
+        "theme"
     ],
-    "homepage": "https://startbootstrap.com/template-overviews/clean-blog",
-    "bugs": {
-        "url": "https://github.com/BlackrockDigital/startbootstrap-clean-blog/issues",
-        "email": "feedback@startbootstrap.com"
+    "scripts": {
+      "start": "browser-sync start --server ./ --files ./",
+      "test": "mocha --compilers js:babel-register test/*.spec.js",
+      "deploy:github-pages": "git subtree push --prefix src origin gh-pages"
     },
     "license": "MIT",
-    "author": "Start Bootstrap",
-    "contributors": [
-        "David Miller (http://davidmiller.io/)"
-    ],
+    "author": "Max Beyer <inflatableanchor@gmail.com>",
     "repository": {
         "type": "git",
         "url": "https://github.com/BlackrockDigital/startbootstrap-clean-blog.git"
