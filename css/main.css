@@ -1,0 +1,151 @@
+@font-face {
+  font-family: "Big Noodle Tilting";
+  src: url("/fonts/big_noodle_titling.ttf");
+}
+@font-face {
+  font-family: "Locke";
+  src: url("/fonts/locke-regular.otf");
+}
+
+body {
+  background-color: #white;
+  font-size: 16px;
+  line-height: 1.5;
+  background: linear-gradient(rgba(255,255,255,.70),rgba(255,255,255,.70)),
+      url("../img/background.bmp");
+  background-size: cover;
+  background-position-y: 15em;
+  background-repeat: no-repeat;
+  height: 100%;
+  position: relative;
+}
+
+.jumbotron h1, h2{
+  font-family: "Big Noodle Tilting";
+  color: white;
+  line-height: 50px;
+  text-shadow: #631F01 1px 0 10px;
+  text-align: center;
+}
+
+.jumbotron h1{
+  font-size: 60px;
+  padding: 20px 10px 0px 10px;
+}
+
+h2{
+  font-size: 32px;
+  line-height: 50px;
+  padding: 0px 10px 20px 10px;
+}
+
+h3{
+  font-family: "Big Noodle Tilting";
+  font-size: 32px;
+}
+h4{
+  font-family: "Big Noodle Tilting";
+  font-size: 24px;
+}
+
+.nav {
+  font-size: 24px;
+  font-family:"Big Noodle Tilting";
+}
+
+p{
+  font-family: Locke;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.jumbotron {
+  background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+      url("../img/wasteland.jpg");
+  /* background-image: url("images/wasteland.jpg"); */
+  background-size: cover;
+  background-position-y: 40%;
+  margin-bottom:0;
+}
+
+.first-element{
+  margin-top: 2em;
+}
+
+.mutation-panel{
+  height: auto;
+}
+
+.sector-panel{
+  height: auto;
+}
+
+.well {
+  background-color: white;
+}
+
+.input-group{
+  padding-left: 1em;
+  width: 300px;
+}
+
+#mutationId.input-group{
+  width:360px;
+}
+
+.form-control{
+  height: 46px;
+}
+
+.footer {
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   background-color: #222;
+   border-color: #080808;
+   color:white;
+}
+
+#reactiveEffectsTitle, #enhancingEffectsTitle {
+  margin-left: 15px;
+}
+
+#copyright{
+  font-size: 12px;
+}
+
+p#mutationPlaceholderName{
+  text-align: left;
+  font-weight: bold;
+  margin-top: 1.5em;
+}
+
+p#mutationPlaceholderDescription{
+  text-align: left;
+  font-style: normal;
+}
+
+.social {
+  padding: 5px 15px;
+  color: #777;
+     -webkit-transform: scale(0.8);
+     /* Browser Variations: */
+
+     -moz-transform: scale(0.8);
+     -o-transform: scale(0.8);
+     -webkit-transition-duration: 0.5s;
+     -moz-transition-duration: 0.5s;
+     -o-transition-duration: 0.5s;
+ }
+
+ #social-fb:hover {
+     color: #3B5998;
+ }
+ #social-tw:hover {
+     color: #4099FF;
+ }
+ #social-em:hover {
+     color: #f39c12;
+ }
